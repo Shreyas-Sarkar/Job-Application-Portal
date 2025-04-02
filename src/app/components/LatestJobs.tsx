@@ -1,7 +1,21 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const jobs = [
+type TagType = 'Full-Time' | 'Marketing' | 'Design' | 'Business' | 'Technology';
+
+interface Company {
+  name: string;
+  logo: string;
+  location: string;
+}
+
+interface Job {
+  company: Company;
+  title: string;
+  tags: TagType[];
+}
+
+const jobs: Job[] = [
   {
     company: {
       name: 'Nomad',
@@ -76,10 +90,12 @@ const jobs = [
   }
 ];
 
-const tagColors = {
-  'Full-Time': 'bg-emerald-50 text-emerald-500',
+const tagColors: Record<TagType, string> = {
+  'Full-Time': 'bg-blue-50 text-blue-500',
   'Marketing': 'bg-orange-50 text-orange-500',
-  'Design': 'bg-blue-50 text-blue-500'
+  'Design': 'bg-emerald-50 text-emerald-500',
+  'Business': 'bg-blue-50 text-blue-500',
+  'Technology': 'bg-red-50 text-red-500'
 };
 
 const LatestJobs = () => {
@@ -122,7 +138,7 @@ const LatestJobs = () => {
                 <span>{job.company.location}</span>
               </div>
               <div className="flex gap-2">
-                {job.tags.map((tag, tagIndex) => (
+                {job.tags.map((tag: TagType, tagIndex) => (
                   <span
                     key={tagIndex}
                     className={`px-3 py-1 rounded-lg text-sm ${tagColors[tag]}`}
