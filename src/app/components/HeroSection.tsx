@@ -58,10 +58,11 @@ const HeroSection = () => {
       <div className="flex-1 hidden lg:block">
         <Image
           src="/hero-img.jpeg"
-          alt="Job seeker"
-          width={600}
-          height={600}
-          className="object-contain"
+          alt="Hero image"
+          width={500}
+          height={500}
+          className="w-full h-auto rounded-lg shadow-lg"
+          priority
         />
       </div>
     </div>
