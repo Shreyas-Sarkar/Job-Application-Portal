@@ -79,7 +79,7 @@ const CategorySection = () => {
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="flex justify-between items-center mb-12">
-        <h2 className="text-3xl font-bold">
+        <h2 className="text-3xl font-bold text-black">
           Explore by <span className="text-blue-600">category</span>
         </h2>
         <Link 
@@ -98,19 +98,13 @@ const CategorySection = () => {
           <Link
             key={index}
             href={`/jobs/${category.title.toLowerCase()}`}
-            className={`p-6 border rounded-lg hover:border-blue-600 transition-colors group ${
-              category.title === 'Marketing' ? 'bg-blue-600 text-white' : 'bg-white'
-            }`}
+            className="p-6 border rounded-lg bg-white hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all group"
           >
-            <div className={`${
-              category.title === 'Marketing' ? 'text-white' : 'text-blue-600 group-hover:text-blue-600'
-            }`}>
+            <div className="text-blue-600 group-hover:text-white">
               {category.icon}
             </div>
-            <h3 className="text-xl font-semibold mt-4 mb-2">{category.title}</h3>
-            <p className={`${
-              category.title === 'Marketing' ? 'text-blue-100' : 'text-gray-500'
-            }`}>
+            <h3 className="text-black text-xl font-semibold mt-4 mb-2">{category.title}</h3>
+            <p className="text-black group-hover:text-blue-100">
               {category.jobs}
             </p>
           </Link>

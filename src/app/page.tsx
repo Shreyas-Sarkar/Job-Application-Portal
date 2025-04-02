@@ -1,6 +1,10 @@
 import HeroSection from './components/HeroSection';
 import CompaniesSection from './components/CompaniesSection';
 import CategorySection from './components/CategorySection';
+import JobPostingCTA from './components/JobPostingCTA';
+import FeaturedJobs from './components/FeaturedJobs';
+import LatestJobs from './components/LatestJobs';
+import Footer from './components/Footer';
 
 export default function Home() {
   return (
@@ -25,6 +29,14 @@ export default function Home() {
       <HeroSection />
       <CompaniesSection />
       <CategorySection />
+      <JobPostingCTA />
+      <div className="bg-white">
+        <FeaturedJobs />
+      </div>
+      <div className="bg-gray-50">
+        <LatestJobs />
+      </div>
+      <Footer />
     </main>
   );
 }
