@@ -3,23 +3,23 @@ import Image from 'next/image';
 const companies = [
   {
     name: 'Vodafone',
-    logo: '/vodafone.svg'
+    logo: '/vodafone.png'
   },
   {
     name: 'Intel',
-    logo: '/intel.svg'
+    logo: '/intel.png'
   },
   {
     name: 'Tesla',
-    logo: '/tesla.svg'
+    logo: '/tesla.png'
   },
   {
     name: 'AMD',
-    logo: '/amd.svg'
+    logo: '/amd.png'
   },
   {
     name: 'Talkit',
-    logo: '/talkit.svg'
+    logo: '/talkit.png'
   }
 ];
 

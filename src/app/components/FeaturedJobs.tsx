@@ -30,7 +30,7 @@ const jobs = [
       logo: '/company-logos/pitch.png',
       location: 'Berlin, Germany'
     },
-    title: 'Email Marketing',
+    title: 'Pitch Marketing',
     description: 'Pitch is looking for Customer Manager to join marketing t...',
     type: 'Full Time',
     tags: ['Marketing']
