@@ -1,7 +1,23 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const jobs = [
+type TagType = 'Marketing' | 'Design' | 'Business' | 'Technology';
+
+interface Company {
+  name: string;
+  logo: string;
+  location: string;
+}
+
+interface Job {
+  company: Company;
+  title: string;
+  description: string;
+  type: string;
+  tags: TagType[];
+}
+
+const jobs: Job[] = [
   {
     company: {
       name: 'Revolut',
@@ -92,7 +108,7 @@ const jobs = [
   }
 ];
 
-const tagColors = {
+const tagColors: Record<TagType, string> = {
   Marketing: 'bg-orange-50 text-orange-500',
   Design: 'bg-emerald-50 text-emerald-500',
   Business: 'bg-blue-50 text-blue-500',
